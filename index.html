@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="theme-color" content="#5f5eaa">
+    <meta name="msapplication-TileColor" content="#5f5eaa">
+    <meta name="msapplication-navbutton-color" content="#5f5eaa">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5f5eaa">
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script>
+	/* speed */
+	$(document).ready(function() {
+		navigator.geolocation.watchPosition(function(e){
+			$("#speed").text(parseInt(e.coords.speed * 3.6));
+			var speed = parseInt(e.coords.speed * 3.6);
+			$( "#progressbar" ).progressbar({
+				value: speed,
+				max: 100
+			});
+            
+
+
+            $("#sld").slider({
+				value: speed,
+				min: 0,
+				max: 100,
+				step: 1,
+				change: function(event, ui) {
+				  $("#amount").val(ui.value).trigger("change");
+				  // console.log(ui.value);
+                    $("#log").append(ui.value + ', ');
+                    var el = document.getElementById("log");
+                    text = el.textContent || el.innerText;
+                    
+                    console.log(Math.max(text));
+				},
+			});
+			$('input').on('change', showResult);
+            });
+
+            var showResult = function() {
+            let amount = $("#amount").val();
+                if (amount <= 30) {
+                    $("#amount").css("background","red"); 
+                }	
+                if (amount >= 60) {
+                    $("#amount").css("background","aqua"); 
+                }	
+                if (amount >= 90) {
+                    $("#amount").css("background","green"); 
+                }
+            }  
+
+            $("#speed").click(function() {
+               document.body.requestFullscreen();
+            });
+            
+            
+            
+            
+
+		}, function(e) {}, { enableHighAccuracy: true, maximumAge: 30000 });
+
+
+
+		  
+	
+	</script>
+	<style>
+        #sld {position:absolute; z-index:100000;width:300px;display:none;}
+        #amount {position:absolute; margin-left: 20px; top:50px; border:1px white solid; display:block;z-index:100000}
+		html, body { background: #000; overflow: auto;  color: #fff; font: 18px InterstateMono;  margin: 0 auto; width: 100%; height:100%; margin:0; padding:0;   }
+		@font-face { font-family: 'DigitalDismay'; src: url('./fnt/DigitalDismay.eot'); src: url('./fnt/DigitalDismay.eot?#iefix') format('embedded-opentype'), url('./fnt/DigitalDismay.woff2') format('woff2'); font-weight: normal; font-style: normal;}
+		@font-face { font-family: 'InterstateMono'; src: url('fnt/InterstateMono.svg#InterstateMono') format('svg'), url('fnt/InterstateMono.ttf') format('truetype'), url('fnt/InterstateMono.woff') format('woff'); font-weight: normal; font-style: normal;}
+		@font-face { font-family: 'InterstateMonoBold'; src: url('fnt/InterstateMono-Bold.svg#InterstateMono') format('svg'), url('fnt/InterstateMono-Bold.ttf') format('truetype'), url('fnt/InterstateMono-Bold.woff') format('woff'); font-weight: normal; font-style: normal;}
+		* {transition: .2s all linear!important;}
+		.hud {    transform: scaleX(-1) rotate(180deg);    position: relative;    top: -80px;}
+        #speed { position: fixed; left: 35px;top: 382px;font-size: 120px;text-align: right;letter-spacing: -6px;z-index: 100;display: block;width: 180px;}
+		svg {width: 100%;background-color:#000; height: 720px; opacity:1; display: table; margin: 0 auto; top: 70px; position: relative;}		
+		#slider .rs-handle  { background-color: transparent; border: 8px solid transparent; border-right-color: black; margin: -6px 0px 0px 14px !important; border-width: 6px 104px 6px 4px;}
+		#slider .rs-handle:before  { display: block; content: " "; position: absolute; height: 22px; width: 22px; background: black; right: -11px; bottom: -11px; border-radius: 100px;}
+		#slider .rs-tooltip  { top: 75%; font-size: 11px;}
+		#slider .rs-tooltip div  { text-align: center; background: orange; color: white; border-radius: 4px; padding: 1px 5px 2px; margin-top: 4px;}
+		#slider .rs-range-color  { background-color: #DB5959;}
+		#slider .rs-path-color  { background-color: #F0C5C5;}
+		#progressbar {    background: transparent;    border: 0;    position: absolute;  z-index:100000;  right: 8px;    display: block;    width: 504px;    top: 127px;    height: 23px;}
+		.ui-progressbar .ui-progressbar-value{	    border: 0;    background-color: rgba(12, 154, 221, .25);	background: -moz-linear-gradient(left,  rgba(12,154,221,0.5) 0%, rgba(216,60,13,0.89) 77%, rgba(252,67,0,1) 100%);		background: -webkit-linear-gradient(left,  rgba(12,154,221,0.5) 0%,rgba(216,60,13,0.89) 77%,rgba(252,67,0,1) 100%);		background: linear-gradient(to right,  rgba(12,154,221,0.5) 0%,rgba(216,60,13,0.89) 77%,rgba(252,67,0,1) 100%);		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#800c9add', endColorstr='#fc4300',GradientType=1 );				}
+		#log {color:white; position: absolute;bottom: 100px;right: 100px;}
+	</style>
+</head>
+<body onload="document.body.requestFullscreen();">
+<div id="progressbar"></div>
+<div id="sld"></div>
+<div id="log"></div>
+<input type="text" id="amount">
+
+
+<div class="hud">
+    <span id="speed">66</span>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
