@@ -1,0 +1,38 @@
+<link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+
+<div id="sld"></div>
+<input type="text" id="amount">
+
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$("#sld").slider({
+				value: 0,
+				min: 0,
+				max: 2000,
+				step: 1,
+				slide: function(event, ui) {
+				  $("#amount").val(ui.value).trigger("change");
+				   console.log(ui.value);
+				   $(".speed_gauge path").attr("stroke-dashoffset", ui.value);
+				},
+			});
+			$('input').on('change', showResult);
+		});
+
+		var showResult = function() {
+		  let amount = $("#amount").val();
+			if (amount <= 999) {
+				$("#amount").css("background","red"); 
+			}	
+			if (amount >= 1000) {
+				$("#amount").css("background","aqua"); 
+			}	
+			if (amount >= 1500) {
+				$("#amount").css("background","green"); 
+			}
+		}
+    </script>

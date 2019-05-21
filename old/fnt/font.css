@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Interstate Mono Regular';
+  src: url('Interstate Mono Regular.eot');
+  src: url('Interstate Mono Regular.eot?#iefix') format('embedded-opentype'),
+       url('Interstate Mono Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterstateMono';
+  src: url('InterstateMono.svg#InterstateMono') format('svg'),
+       url('InterstateMono.ttf') format('truetype'),
+       url('InterstateMono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

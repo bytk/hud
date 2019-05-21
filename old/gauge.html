@@ -1,0 +1,108 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+
+<style>
+.container {max-width: 400px;margin: 0 auto;}
+.signature {position: relative;overflow: auto;width: 100%;height: 0;padding-bottom: 55.30973%;}
+.signature svg {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+</style>
+
+<div class="container">  
+<div class="signature">  
+	<svg class="speed_gauge" xmlns="http://www.w3.org/2000/svg" width="1317" height="560" viewBox="0 0 1317 560"><path d="M288 5C196.333 14.8333 11.4 84.7 5.00001 285.5C-1.39999 486.3 191 538.167 288 539L1316.5 555" stroke="black" fill="none" stroke-width="9"/></svg>
+
+	</div>
+</div>
+<button>Play it again</button>
+<script src='js/jquery.min.js'></script>      
+<link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script id="rendered-js">
+(function() {
+		window.signature = {
+			initialize: function() {
+				return $('.signature svg').each(function() {
+					var delay, i, len, length, path, paths, previousStrokeLength, results, speed;
+					paths = $('path, circle, rect', this);
+					delay = 0;
+					results = [];
+					for (i = 0, len = paths.length; i < len; i++) {
+						path = paths[i];
+						length = path.getTotalLength();
+						alert(length);
+						previousStrokeLength = speed || 0;
+						speed = length < 100 ? 20 : Math.floor(length);
+						delay += previousStrokeLength + 100;
+						results.push($(path).css('transition', 'none').attr('data-length', length).attr('data-speed', speed).attr('data-delay', delay).attr('stroke-dashoffset', '0').attr('stroke-dasharray', length + ',' + length));
+					};
+					return results;
+				});
+			},
+			animate: function() {
+				return $('.signature svg').each(function() {
+					var delay, i, len, length, path, paths, results, speed;
+					paths = $('path, circle, rect', this);
+					results = [];
+					for (i = 0, len = paths.length; i < len; i++) {
+						path = paths[i];
+						length = $(path).attr('data-length');
+						speed = $(path).attr('data-speed');
+						delay = $(path).attr('data-delay');
+						results.push($(path).css('transition', 'stroke-dashoffset ' + speed + 'ms ' + delay + 'ms linear').attr('stroke-dashoffset', '-500'));
+					};
+					return results;
+				});
+			}
+		};
+
+$(document).ready(function() {
+	window.signature.initialize();
+	return $('button').on('click', function() {
+		window.signature.initialize();
+		return setTimeout(function() {
+			return window.signature.animate();
+		}, 500);
+	});
+});
+$(window).load(function() {
+return window.signature.animate();
+});
+}).call(this);   
+
+</script>
+
+
+<div id="sld"></div>
+<input type="text" id="amount">
+
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$("#sld").slider({
+				value: 500,
+				min: -2000,
+				max: 2000,
+				step: 1,
+				slide: function(event, ui) {
+				  $("#amount").val(ui.value).trigger("change");
+				   console.log(ui.value);
+				   $(".speed_gauge path").attr("stroke-dashoffset", ui.value);
+				},
+			});
+			$('input').on('change', showResult);
+		});
+
+		var showResult = function() {
+		  let amount = $("#amount").val();
+			if (amount <= 999) {
+				$("#amount").css("background","red"); 
+			}	
+			if (amount >= 1000) {
+				$("#amount").css("background","aqua"); 
+			}	
+			if (amount >= 1500) {
+				$("#amount").css("background","green"); 
+			}
+		}
+    </script>

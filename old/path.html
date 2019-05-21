@@ -1,0 +1,34 @@
+
+<link href="style.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.pathslider.min.js"></script>
+<style>
+#slider {
+ background: #fff;
+  width      : 110px;
+  height     : 191px;
+}
+</style>
+
+<script>
+
+	$(document).ready(function() {
+
+	var color1 = "rgba(135,224,253,1)";
+	
+	$("#slider").pathslider({
+	    useCanvas: false,
+
+		points     : [ 102,183,-125,0,-125,0,102,8 ],
+		value      : 51,
+		rotateGrip : true,
+		tolerance  : 3,
+		range      : 30,
+		curve      : { width:4, color:[color1,"#6abaae"], cap:"round" }
+	});
+
+});
+
+</script>
+
+<div id="slider"></div>
