@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+	<script>
+	/* speed */
+	$(document).ready(function() {
+		navigator.geolocation.watchPosition(function(e){
+			$(".speed").text(parseInt(e.coords.speed * 3.6));
+			var speed = parseInt(e.coords.speed * 3.6);
+			$( ".progressbar" ).progressbar({
+				value: speed,
+				max: 100
+			});
+
+
+
+            $("#sld").slider({
+				value: speed,
+				min: 0,
+				max: 100,
+				step: 1,
+				change: function(event, ui) {
+				  $("#amount").val(ui.value).trigger("change");
+				  // console.log(ui.value);
+                    $("#log").append(ui.value + ', ');
+                    var el = document.getElementById("log");
+                    text = el.textContent || el.innerText;
+
+                    console.log(Math.max(text));
+				},
+			});
+			$('input').on('change', showResult);
+
+
+            var showResult = function() {
+            let amount = $("#amount").val();
+                if (amount <= 30) {
+                    $("#amount").css("background","red");
+                }
+                if (amount >= 60) {
+                    $("#amount").css("background","aqua");
+                }
+                if (amount >= 90) {
+                    $("#amount").css("background","green");
+                }
+            }
+
+            $(".speed").click(function() {
+               document.body.requestFullscreen();
+            });
+
+		}, function(e) {}, { enableHighAccuracy: true, maximumAge: 30000 });
+    });
+
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+
+
+
+<div id="hud">
+    <span class="speed">66</span>
+</div>
+
+
+
+</body>
+</html>
