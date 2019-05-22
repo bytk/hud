@@ -21,6 +21,28 @@
   transition: 0.2s all linear !important;
 }
 
+/* keyframes */
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* global rules */
 html, body {
   background: #000;
   overflow: auto;
@@ -48,6 +70,12 @@ html, body {
   border: 1px white solid;
   display: block;
   z-index: 100000;
+}
+
+/* components & items */
+.rotate-center {
+  -webkit-animation: rotate-center 20s ease-in-out infinite alternate-reverse backwards;
+  animation: rotate-center 20s ease-in-out infinite alternate-reverse backwards;
 }
 
 .progressbar {

@@ -3,12 +3,45 @@
 @font-face { font-family: 'InterstateMonoBold'; src: url('fnt/InterstateMono-Bold.svg#InterstateMono') format('svg'), url('fnt/InterstateMono-Bold.ttf') format('truetype'), url('fnt/InterstateMono-Bold.woff') format('woff'); font-weight: normal; font-style: normal;}
 * {transition: .2s all linear!important;}
 
+/* keyframes */
+
+ @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+
+/* global rules */
+
 html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #fff; font: 18px 'Do Hyeon';  margin: 0 auto; width: 100%; height:100%; margin:0; padding:0;}
 
 #sld {position:absolute; z-index:100000;width:300px;display:none;}
 #amount {position:absolute; margin-left: 20px; top:50px; border:1px white solid; display:block;z-index:100000}
 
  
+/* components & items */
+
+.rotate-center {
+	-webkit-animation: rotate-center 20s ease-in-out infinite alternate-reverse backwards;
+	        animation: rotate-center 20s ease-in-out infinite alternate-reverse backwards;
+}
+
 
 
 .progressbar {    background: transparent;    border: 0;    position: absolute;  z-index:100000;  right: 8px;    display: block;    width: 504px;    top: 127px;    height: 23px;
