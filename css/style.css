@@ -67,6 +67,7 @@ html, body {
 }
 
 .progressbar {
+  filter: blur(1.5px);
   background: transparent;
   border: 0 !important;
   position: absolute;
@@ -80,6 +81,7 @@ html, body {
   z-index: 50;
 }
 .progressbar .ui-progressbar-value {
+  filter: blur(5px);
   border: 0 !important;
   background: #0c9add;
   background: -moz-linear-gradient(left, #0c9add 0%, #0cf2a1 25%, #fcb400 50%, #f9630c 75%, red 100%);
@@ -91,7 +93,6 @@ html, body {
   content: "";
   width: 100px;
   height: 20px;
-  background-color: white;
   display: block;
   position: absolute;
   z-index: 1000000000;
