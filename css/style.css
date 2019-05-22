@@ -30,23 +30,11 @@
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes rotate-90-cw {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
 @keyframes rotate-90-cw {
   0% {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
 }
@@ -166,9 +154,6 @@ svg {
   bottom: 25%;
   left: 5%;
   margin: auto;
-}
-svg .inner {
-  animation: rotate-center 60s linear infinite reverse backwards;
 }
 
 /*# sourceMappingURL=style.css.map */

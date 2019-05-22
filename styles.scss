@@ -15,23 +15,12 @@
     }
   }
 
-  @-webkit-keyframes rotate-90-cw {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-    }
-  }
+
   @keyframes rotate-90-cw {
     0% {
-      -webkit-transform: rotate(0);
               transform: rotate(0);
     }
     100% {
-      -webkit-transform: rotate(90deg);
               transform: rotate(90deg);
     }
   }
@@ -53,7 +42,7 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 	        animation: rotate-center 20s ease-in-out infinite alternate-reverse backwards;
 }
 
-.rotate-90-cw {
+ .rotate-90-cw {
 	-webkit-animation: rotate-90-cw 40s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 	        animation: rotate-90-cw 40s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 }
@@ -81,7 +70,7 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 
 svg { width: 90%; height: 720px; opacity: 1; display: inline-block; top: 25%; position: absolute; z-index: 150; bottom: 25%; left: 5%; margin: auto;
 
-    .inner {    animation: rotate-center 60s linear infinite reverse backwards;}
+    
 
 
 }
