@@ -71,11 +71,12 @@ html, body {
   border: 0 !important;
   position: absolute;
   z-index: 100000;
-  right: 8px;
+  left: 141px;
   display: block;
-  width: 504px;
-  top: 127px;
-  height: 23px;
+  width: 80%;
+  bottom: 9px;
+  height: 45px;
+  border-radius: 0;
 }
 .progressbar .ui-progressbar .ui-progressbar-value {
   border: 0 !important;
