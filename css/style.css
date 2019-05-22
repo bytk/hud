@@ -87,6 +87,16 @@ html, body {
   background: linear-gradient(to right, #0c9add 0%, #0cf2a1 25%, #fcb400 50%, #f9630c 75%, red 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0c9add", endColorstr="#ff0000",GradientType=1 );
 }
+.progressbar .ui-progressbar-value:before {
+  content: "";
+  width: 100px;
+  height: 20px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  z-index: 1000000000;
+  box-shadow: inset 0px 0px 14px 3px black;
+}
 
 #log {
   color: white;
@@ -120,7 +130,7 @@ html, body {
 }
 
 svg {
-  width: 100%;
+  width: 90%;
   height: 720px;
   opacity: 1;
   display: inline-block;
@@ -128,6 +138,7 @@ svg {
   position: absolute;
   z-index: 150;
   bottom: 25%;
+  left: 5%;
   margin: auto;
 }
 svg .inner {
