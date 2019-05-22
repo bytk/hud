@@ -68,23 +68,24 @@ html, body {
 
 .progressbar {
   background: transparent;
-  border: 1 !important;
+  border: 0 !important;
   position: absolute;
-  z-index: 100000;
-  left: 141px;
+  left: 61px;
   display: block;
-  width: 80%;
+  width: 87%;
   bottom: 9px;
   height: 45px;
   border-radius: 0;
+  box-shadow: inset 0px 0px 14px 3px rgba(0, 0, 0, 0.75);
+  z-index: 50;
 }
-.progressbar .ui-progressbar .ui-progressbar-value {
+.progressbar .ui-progressbar-value {
   border: 1 !important;
-  background-color: rgba(12, 154, 221, 0.25);
-  background: -moz-linear-gradient(left, rgba(12, 154, 221, 0.5) 0%, rgba(216, 60, 13, 0.89) 77%, #fc4300 100%);
-  background: -webkit-linear-gradient(left, rgba(12, 154, 221, 0.5) 0%, rgba(216, 60, 13, 0.89) 77%, #fc4300 100%);
-  background: linear-gradient(to right, rgba(12, 154, 221, 0.5) 0%, rgba(216, 60, 13, 0.89) 77%, #fc4300 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#800c9add", endColorstr="#fc4300",GradientType=1 );
+  background: #0c9add;
+  background: -moz-linear-gradient(left, #0c9add 0%, #0cf2a1 25%, #fcb400 50%, #f9630c 75%, red 100%);
+  background: -webkit-linear-gradient(left, #0c9add 0%, #0cf2a1 25%, #fcb400 50%, #f9630c 75%, red 100%);
+  background: linear-gradient(to right, #0c9add 0%, #0cf2a1 25%, #fcb400 50%, #f9630c 75%, red 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0c9add", endColorstr="#ff0000",GradientType=1 );
 }
 
 #log {
@@ -125,7 +126,7 @@ svg {
   display: inline-block;
   top: 25%;
   position: absolute;
-  z-index: 0;
+  z-index: 150;
   bottom: 25%;
   margin: auto;
 }
