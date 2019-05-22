@@ -68,7 +68,7 @@ html, body {
 
 .progressbar {
   background: transparent;
-  border: 0;
+  border: 0 !important;
   position: absolute;
   z-index: 100000;
   left: 141px;
@@ -79,7 +79,7 @@ html, body {
   border-radius: 0;
 }
 .progressbar .ui-progressbar .ui-progressbar-value {
-  border: 0;
+  border: 0 !important;
   background-color: rgba(12, 154, 221, 0.25);
   background: -moz-linear-gradient(left, rgba(12, 154, 221, 0.5) 0%, rgba(216, 60, 13, 0.89) 77%, #fc4300 100%);
   background: -webkit-linear-gradient(left, rgba(12, 154, 221, 0.5) 0%, rgba(216, 60, 13, 0.89) 77%, #fc4300 100%);
