@@ -64,7 +64,8 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 
 
 #hud.gt-hud {font-family: 'InterstateMono';
-    .speed { left: 0; top: 0; font-size: 120px;text-align: right;letter-spacing: -6px;z-index: 100;display: block;width: 40%;}
+    .speed { left: 0; top: 0; font-size: 120px;text-align: right;letter-spacing: -6px;z-index: 100;display: block;
+      padding: 0;height: 50%;bottom: 0;line-height: 230px;text-align: center;width: 40.5%;}
 
 
 

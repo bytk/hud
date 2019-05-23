@@ -153,7 +153,12 @@ html, body {
   letter-spacing: -6px;
   z-index: 100;
   display: block;
-  width: 40%;
+  padding: 0;
+  height: 50%;
+  bottom: 0;
+  line-height: 230px;
+  text-align: center;
+  width: 40.5%;
 }
 
 svg {
