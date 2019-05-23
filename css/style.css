@@ -142,10 +142,10 @@ html, body {
   padding: 50px 0 0 0;
 }
 
-.gt-hud {
+#hud.gt-hud {
   font-family: "InterstateMono";
 }
-.gt-hud .speed {
+#hud.gt-hud .speed {
   left: 0;
   top: 0;
   font-size: 120px;
