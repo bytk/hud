@@ -29,7 +29,7 @@
  
 /* global rules */
 
-html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #fff; font: 18px 'Do Hyeon';  margin: 0 auto; width: 100%; height:100%; margin:0; padding:0;}
+html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #fff; margin: 0 auto; width: 100%; height:100%; margin:0; padding:0;}
 
 #sld {position:absolute; z-index:100000;width:300px;display:none;}
 #amount {position:absolute; margin-left: 20px; top:50px; border:1px white solid; display:block;z-index:100000}
@@ -52,7 +52,6 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
     .ui-progressbar-value{	 filter: blur(5px);    border: 0!important;    background: rgb(12,154,221);        background: -moz-linear-gradient(left, rgba(12,154,221,1) 0%, rgba(12,242,161,1) 25%, rgba(252,180,0,1) 50%, rgba(249,99,12,1) 75%, rgba(255,0,0,1) 100%);        background: -webkit-linear-gradient(left, rgba(12,154,221,1) 0%,rgba(12,242,161,1) 25%,rgba(252,180,0,1) 50%,rgba(249,99,12,1) 75%,rgba(255,0,0,1) 100%);        background: linear-gradient(to right, rgba(12,154,221,1) 0%,rgba(12,242,161,1) 25%,rgba(252,180,0,1) 50%,rgba(249,99,12,1) 75%,rgba(255,0,0,1) 100%);        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c9add', endColorstr='#ff0000',GradientType=1 );
         &:before { content: ''; width: 100px; height: 20px; display: block; position: absolute; z-index: 1000000000; box-shadow: inset 0px 0px 14px 3px rgba(0, 0, 0, 1);}
     }
-
 }
 
 #log {color:white; position: absolute;bottom: 100px;right: 100px;}
@@ -61,7 +60,11 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 
 #hud { transform: scaleX(-1) rotate(180deg); position: relative; display: table; width: 100%; height: 100%; margin: 0; padding: 0; z-index: 1000;
     .speed { position: fixed; font-size: 280px; letter-spacing: -6px; z-index: 50; display: table; text-align: center; width: 100%; height: 100%; margin: auto; box-sizing: border-box; padding: 50px 0 0 0;}
+}
 
+
+.gt-hud {font-family: 'InterstateMono';
+    .speed { left: 35px; top: 382px; font-size: 120px;text-align: right;letter-spacing: -6px;z-index: 100;display: block;width: 180px;}
 
 
 
