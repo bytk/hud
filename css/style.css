@@ -146,14 +146,14 @@ html, body {
   font-family: "InterstateMono";
 }
 .gt-hud .speed {
-  left: 35px;
-  top: 382px;
+  left: 0;
+  top: 0;
   font-size: 120px;
   text-align: right;
   letter-spacing: -6px;
   z-index: 100;
   display: block;
-  width: 180px;
+  width: 40%;
 }
 
 svg {
