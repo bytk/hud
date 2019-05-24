@@ -160,6 +160,14 @@ html, body {
   text-align: center;
   width: 40.5%;
 }
+#hud.gt-hud .progressbar .ui-progressbar .ui-progressbar-value {
+  border: 0;
+  background: #0c9add;
+  background: -moz-linear-gradient(left, #0c9add 0%, #0cf2a1 100%);
+  background: -webkit-linear-gradient(left, #0c9add 0%, #0cf2a1 100%);
+  background: linear-gradient(to right, #0c9add 0%, #0cf2a1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0c9add", endColorstr="#0cf2a1",GradientType=1 );
+}
 
 svg {
   width: 90%;
