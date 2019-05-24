@@ -98,7 +98,8 @@ html, body {
   mix-blend-mode: hard-light;
 }
 .progressbar .ui-progressbar-value {
-  width: 40%;
+  width: 40% !important;
+  display: block !important;
   height: 23px;
   box-shadow: 0 0px 20px 15px rgba(255, 61, 0, 0.5);
   border: 1px red solid;
