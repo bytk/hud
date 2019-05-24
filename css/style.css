@@ -85,6 +85,22 @@ html, body {
     }
 }
 */
+.progressbar {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  z-index: 100000;
+  right: 8px;
+  display: block;
+  width: 504px;
+  top: 127px;
+  height: 23px;
+}
+.progressbar .ui-progressbar .ui-progressbar-value {
+  border: 0;
+  background: linear-gradient(270deg, #F2280C 0%, #F27A0C 27.48%, rgba(12, 242, 228, 0.8) 53.05%, rgba(12, 154, 221, 0.54) 78.95%, rgba(10, 83, 119, 0.42) 99.98%);
+}
+
 #log {
   color: white;
   position: absolute;
@@ -134,21 +150,17 @@ html, body {
   text-align: center;
   width: 40.5%;
 }
-#hud.gt-hud .progressbar .ui-progressbar .ui-progressbar-value {
-  border: 0;
-  background: linear-gradient(270deg, #F2280C 0%, #F27A0C 27.48%, rgba(12, 242, 228, 0.8) 53.05%, rgba(12, 154, 221, 0.54) 78.95%, rgba(10, 83, 119, 0.42) 99.98%);
-}
 
 svg {
-  width: 90%;
-  height: 720px;
+  width: 100%;
+  height: auto;
   opacity: 1;
   display: inline-block;
-  top: 25%;
+  top: 0;
   position: absolute;
   z-index: 150;
-  bottom: 25%;
-  left: 5%;
+  bottom: 0;
+  left: 0;
   margin: auto;
 }
 
