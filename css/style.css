@@ -93,7 +93,7 @@ html, body {
   right: 10px;
   display: block;
   width: 504px;
-  top: 266px;
+  top: 233px;
   border-radius: 3px;
   height: 23px;
   mix-blend-mode: hard-light;
@@ -101,7 +101,6 @@ html, body {
 .progressbar .ui-progressbar-value {
   height: 23px;
   box-shadow: 0 0px 20px 15px rgba(255, 61, 0, 0.5);
-  border: 1px red solid;
   background: linear-gradient(270deg, #FF3D00 0%, #00A3FF 40.1%, rgba(0, 159, 209, 0) 100%), linear-gradient(270deg, #FF2E00 -3.66%, rgba(187, 98, 33, 0.891973) 19.2%, rgba(0, 163, 255, 0.59) 54.17%, rgba(255, 255, 255, 0) 88.07%), linear-gradient(270deg, rgba(12, 154, 221, 0.8) 38.64%, rgba(0, 0, 0, 0.8) 78.91%), linear-gradient(90.31deg, rgba(0, 209, 255, 0.4) 11.14%, rgba(3, 76, 86, 0) 77.42%);
 }
 
