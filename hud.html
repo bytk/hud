@@ -62,8 +62,14 @@
                             }
                         }
             
-                        $("#hud").click(function() {
-                           document.body.requestFullscreen();
+                        var x = false;
+                            $("#hud").on('click', function(){
+                            if (!x){
+                                document.body.requestFullscreen();
+                            }
+                            else {
+                                document.exitFullscreen();
+                            }
                         });
             
                     }, function(e) {}, { enableHighAccuracy: true, maximumAge: 30000 });
