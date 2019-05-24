@@ -96,7 +96,7 @@ html, body {
   top: 127px;
   height: 23px;
 }
-.progressbar .ui-progressbar .ui-progressbar-value {
+.progressbar .ui-progressbar-value {
   border: 0;
   background: linear-gradient(270deg, #F2280C 0%, #F27A0C 27.48%, rgba(12, 242, 228, 0.8) 53.05%, rgba(12, 154, 221, 0.54) 78.95%, rgba(10, 83, 119, 0.42) 99.98%);
 }
