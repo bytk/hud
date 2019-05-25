@@ -26,20 +26,8 @@
                         },
                     });
                     $('input').on('change', showResult);
+                    console.log(Math.max(speed));
         
-        
-                    var showResult = function() {
-                    let amount = $("#amount").val();
-                        if (amount <= 30) {
-                            $("#test1").css("background","red");
-                        }
-                        if (amount >= 60) {
-                            $("#test2").css("background","aqua");
-                        }
-                        if (amount >= 90) {
-                            $("#test3").css("background","green");
-                        }
-                    }
         
               
 
