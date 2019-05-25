@@ -41,33 +41,10 @@
                         }
                     }
         
-                    /* toggle fullscreen */
-                    $('#hud').on('click',function(){
-                        if($(this).attr('display-state') == 0) {
-                            $(this).attr('display-state', 1);
-                            document.body.requestFullscreen();
-                        } else {
-                            $(this).attr('display-state', 0);
-                            document.exitFullscreen();
-                        }
-                    });
-
-
-/*
-                    $(".switch").click(function() {
-                        //$( "#hud" ).toggleClass( "hudon" );
-                        if($("#hud").className("hudon") !== 0){
-                            $("#hud").addClass("hudon");
-                        }else{
-                            $("#hud").removeClass("hudon");
-                        }
-                    });*/
-                    $( ".switch" ).click(function() {
-                        $( "#hud.gt-hud" ).toggleClass( "hudon" );
-                      });
+              
 
                 }, function(e) {}, { enableHighAccuracy: true, maximumAge: 30000 });
-
+    
 
             });
         
