@@ -4,7 +4,7 @@
                     $(".speed").text(parseInt(e.coords.speed * 3.6));
                     var speed = parseInt(e.coords.speed * 3.6);
                     $( ".progressbar" ).progressbar({
-                        value: speed,
+                        value: 65,//speed,
                         max: 100
                     });
         
@@ -31,13 +31,13 @@
                     var showResult = function() {
                     let amount = $("#amount").val();
                         if (amount <= 30) {
-                            $("#amount").css("background","red");
+                            $("#test1").css("background","red");
                         }
                         if (amount >= 60) {
-                            $("#amount").css("background","aqua");
+                            $("#test2").css("background","aqua");
                         }
                         if (amount >= 90) {
-                            $("#amount").css("background","green");
+                            $("#test3").css("background","green");
                         }
                     }
         
