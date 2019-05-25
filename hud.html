@@ -16,6 +16,7 @@
 <body>
 	<script src="js/script.js"></script>
     <script>
+            $(document).ready(function() {
             /* toggle fullscreen */
             $('#hud').on('click',function(){
                   if($(this).attr('display-state') == 0) {
@@ -32,6 +33,7 @@
               $( ".switch" ).click(function() {
                   $( "#hud.gt-hud" ).toggleClass( "hudon" );
                 });
+            });
           </script>
 <button class="switch">hud</button>
     <div id="hud" class="gt-hud" display-state="0">
