@@ -63,23 +63,24 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 
 
 
-#hud { transform: scaleX(-1) rotate(180deg); position: relative; display: table; width: 100%; height: 100%; margin: 0; padding: 0; z-index: 1000;
-    .speed { position: fixed; font-size: 280px; letter-spacing: -6px; z-index: 50; display: table; text-align: center; width: 100%; height: 100%; margin: auto; box-sizing: border-box; padding: 50px 0 0 0;}
+#hud {  transform: scaleX(1) rotate(0deg); position: fixed; display: table; width: 100%; height: 100%; margin: 0; padding: 0; z-index: 1000;
+   // .speed { position: fixed; font-size: 280px; letter-spacing: -6px; z-index: 50; display: table; text-align: center; width: 100%; height: 100%; margin: auto; box-sizing: border-box; padding: 50px 0 0 0;}
 }
 
+.hudon { transform: scaleX(-1) rotate(180deg)!important; }
+.switch {position: absolute; z-index: 1000000;}
 
 #hud.gt-hud {font-family: 'InterstateMono';
-    .speed { left: 0; top: 0; font-size: 120px;text-align: right;letter-spacing: -6px;z-index: 100;display: block;
-      padding: 0;height: 50%;bottom: 0;line-height: 230px;text-align: center;width: 40.5%;}
-
-
-
-}
-
-
-svg { width: 100%; height: auto; opacity: 1; display: inline-block; top: 0; position: absolute; z-index: 150; bottom: 0; left: 0; margin: auto;
-
-    
+    .speed { left: 0; top: 0; font-size: 120px;text-align: center; position: fixed; letter-spacing: -6px;z-index: 100; display: block; padding: 0; height: 50%;bottom: 0;line-height: 230px; text-align: center; width: 40.5%;}
+    svg { width: 100%; height: auto; opacity: 1; display: inline-block; top: 0; position: absolute; z-index: 150; bottom: 0; left: 0; margin: auto;
+      path {}
+    }
+    .frame {width: 100%; height: 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: auto; 
+      &:first-child {mix-blend-mode: overlay;}
+    }
 
 
 }
+
+
+

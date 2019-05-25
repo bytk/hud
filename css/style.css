@@ -112,8 +112,8 @@ html, body {
 }
 
 #hud {
-  transform: scaleX(-1) rotate(180deg);
-  position: relative;
+  transform: scaleX(1) rotate(0deg);
+  position: fixed;
   display: table;
   width: 100%;
   height: 100%;
@@ -121,18 +121,14 @@ html, body {
   padding: 0;
   z-index: 1000;
 }
-#hud .speed {
-  position: fixed;
-  font-size: 280px;
-  letter-spacing: -6px;
-  z-index: 50;
-  display: table;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 50px 0 0 0;
+
+.hudon {
+  transform: scaleX(-1) rotate(180deg) !important;
+}
+
+.switch {
+  position: absolute;
+  z-index: 1000000;
 }
 
 #hud.gt-hud {
@@ -142,7 +138,8 @@ html, body {
   left: 0;
   top: 0;
   font-size: 120px;
-  text-align: right;
+  text-align: center;
+  position: fixed;
   letter-spacing: -6px;
   z-index: 100;
   display: block;
@@ -153,8 +150,7 @@ html, body {
   text-align: center;
   width: 40.5%;
 }
-
-svg {
+#hud.gt-hud svg {
   width: 100%;
   height: auto;
   opacity: 1;
@@ -165,6 +161,19 @@ svg {
   bottom: 0;
   left: 0;
   margin: auto;
+}
+#hud.gt-hud .frame {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#hud.gt-hud .frame:first-child {
+  mix-blend-mode: overlay;
 }
 
 /*# sourceMappingURL=style.css.map */
