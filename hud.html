@@ -28,26 +28,12 @@
                   }
               });
           
-              $("#sld").slider({
-				value: speed,
-				min: 0,
-				max: 100,
-				step: 1,
-				change: function(event, ui) {
-				  $("#amount").val(ui.value).trigger("change");
-				  // console.log(ui.value);
-                    $("#log").append(ui.value + ', ');
-                    var el = document.getElementById("log");
-                    text = el.textContent || el.innerText;
-
-                    console.log(Math.max(text));
-				},
-			});
+             
 			$('input').on('change', showResult);
 
 
             var showResult = function() {
-            let amount = $("#amount").val();
+            let amount = $(".speed").text();
                 if (amount <= 30) {
                     $("#amount").css("background","red");
                 }
