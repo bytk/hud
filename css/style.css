@@ -161,6 +161,9 @@ html, body {
   left: 0;
   margin: auto;
 }
+#hud.gt-hud .speed ~ .frame {
+  mix-blend-mode: overlay;
+}
 #hud.gt-hud .frame {
   width: 100%;
   height: 100%;
