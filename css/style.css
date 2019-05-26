@@ -136,18 +136,19 @@ html, body {
 #hud.gt-hud .speed {
   left: 0;
   font-size: 140px;
-  position: fixed;
+  position: relative;
   letter-spacing: -2px;
   z-index: 100;
   display: block;
   padding: 0;
-  height: 60%;
-  line-height: 270px;
+  height: auto;
+  line-height: 380%;
   text-align: center;
   width: 34%;
-  margin: auto;
+  margin: 0;
   top: 50%;
   bottom: 50%;
+  vertical-align: middle;
 }
 #hud.gt-hud svg {
   width: 100%;
