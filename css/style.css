@@ -159,8 +159,8 @@ html, body {
   text-overflow: ellipsis;
   position: absolute;
   display: table;
-  margin-left: 130px;
-  margin-top: -110px;
+  margin-left: 60px;
+  margin-top: -83px;
 }
 #hud.gt-hud svg {
   width: 100%;
