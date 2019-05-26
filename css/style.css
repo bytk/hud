@@ -149,16 +149,15 @@ html, body {
 #hud.gt-hud .speed {
   left: 0;
   font-size: 140px;
-  position: relative;
+  position: absolute;
   letter-spacing: -2px;
   z-index: 100;
-  display: block;
+  display: table;
   padding: 0;
   height: auto;
-  line-height: 5;
   text-align: center;
   width: 34%;
-  margin: 0;
+  margin: auto 0;
   top: 50%;
   bottom: 50%;
   vertical-align: middle;
