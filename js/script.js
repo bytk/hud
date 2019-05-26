@@ -28,7 +28,18 @@
                     $('input').on('change', showResult);
         
         
-           
+                    var showResult = function() {
+                    let amount = $("#amount").val();
+                        if (amount <= 30) {
+                            $("#amount").css("background","red");
+                        }
+                        if (amount >= 60) {
+                            $("#amount").css("background","aqua");
+                        }
+                        if (amount >= 90) {
+                            $("#amount").css("background","green");
+                        }
+                    }
         
               
 
