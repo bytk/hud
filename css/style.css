@@ -138,6 +138,11 @@ html, body {
   top: 30px;
 }
 
+#amount {
+  display: none;
+  position: fixed;
+}
+
 #hud.gt-hud {
   font-family: "InterstateMono";
 }
