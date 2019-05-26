@@ -152,23 +152,14 @@ html, body {
   left: 0;
   font-size: 140px;
   letter-spacing: -2px;
-  display: table;
-  padding: 0;
-  height: auto;
-  line-height: normal;
-  text-align: center;
-  width: 34%;
-  margin: auto 0;
-  vertical-align: middle;
-  background: transparent;
-  border: 0 !important;
-  position: absolute;
-  z-index: 100000;
-  right: 10px;
+  margin: auto;
   top: 50%;
-  border-radius: 3px;
-  mix-blend-mode: hard-light;
   bottom: 50%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  display: table;
+  margin-left: 60px;
 }
 #hud.gt-hud svg {
   width: 100%;
