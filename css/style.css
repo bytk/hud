@@ -151,9 +151,7 @@ html, body {
 #hud.gt-hud .speed {
   left: 0;
   font-size: 140px;
-  position: absolute;
   letter-spacing: -2px;
-  z-index: 100;
   display: table;
   padding: 0;
   height: auto;
@@ -161,9 +159,16 @@ html, body {
   text-align: center;
   width: 34%;
   margin: auto 0;
-  top: 50%;
-  bottom: 50%;
   vertical-align: middle;
+  background: transparent;
+  border: 0 !important;
+  position: absolute;
+  z-index: 100000;
+  right: 10px;
+  top: 50%;
+  border-radius: 3px;
+  mix-blend-mode: hard-light;
+  bottom: 50%;
 }
 #hud.gt-hud svg {
   width: 100%;
