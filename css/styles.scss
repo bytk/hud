@@ -73,7 +73,7 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 
 
 #hud.gt-hud {font-family: 'InterstateMono';
-    .speed {         left: 0; font-size: 140px; position: relative; letter-spacing: -2px; z-index: 100; display: block; padding: 0; height: auto; line-height: 260%; text-align: center; width: 34%; margin: 0; top: 50%; bottom: 50%; vertical-align: middle;}
+    .speed {         left: 0; font-size: 140px; position: relative; letter-spacing: -2px; z-index: 100; display: block; padding: 0; height: auto; line-height: 3; text-align: center; width: 34%; margin: 0; top: 50%; bottom: 50%; vertical-align: middle;}
     svg { width: 100%; height: auto; opacity: 1; display: inline-block; top: 0; position: absolute; z-index: 150; bottom: 0; left: 0; margin: auto;
       path {}
     }
