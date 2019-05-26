@@ -128,6 +128,14 @@ html, body {
 .switch {
   position: fixed;
   z-index: 1000000;
+  border-radius: 7px;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  background: transparent;
+  color: white;
+  width: 100px;
+  height: 50px;
+  right: 30px;
+  top: 30px;
 }
 
 #hud.gt-hud {

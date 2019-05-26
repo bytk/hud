@@ -68,7 +68,7 @@ html, body {    background: #000; overflow: auto; overflow-x: hidden; color: #ff
 }
 
 .hudon { transform: scaleX(-1) rotate(180deg)!important; }
-.switch {position: fixed; z-index: 1000000;}
+.switch {position: fixed; z-index: 1000000; border-radius: 7px; border: 1px rgba(255,255,255,.5) solid; background: transparent; color: white; width: 100px; height: 50px; right: 30px; top: 30px;}
 
 #hud.gt-hud {font-family: 'InterstateMono';
     .speed {         left: 0; font-size: 140px; position: relative; letter-spacing: -2px; z-index: 100; display: block; padding: 0; height: auto; line-height: 380%; text-align: center; width: 34%; margin: 0; top: 50%; bottom: 50%; vertical-align: middle;}
