@@ -22,11 +22,9 @@
                             var el = document.getElementById("log");
                             text = el.textContent || el.innerText;
         
-                            console.log(Math.max(speed));
                         },
                     });
                     $('input').on('change', showResult);
-                    console.log(Math.max(speed));
         
         
               
