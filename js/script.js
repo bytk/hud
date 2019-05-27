@@ -4,7 +4,7 @@
                     $(".speed").text(parseInt(e.coords.speed * 3.6));
                     var speed = parseInt(e.coords.speed * 3.6);
                     $( ".progressbar" ).progressbar({
-                        value: 65,//speed,
+                        value: speed,
                         max: 100
                     });
         

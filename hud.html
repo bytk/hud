@@ -37,9 +37,9 @@
             var showResult = function() {
                     let amount = $("#amount").val();
                     if (amount <= 1) {
-                            $(".speed").addClass("blink");
+                            $("span.speed").addClass("blink");
                         }if (amount >= 2) {
-                            $(".speed").removeClass("blink");
+                            $("span.speed").removeClass("blink");
                         }
                         if (amount >= 10) {
                             $("path.first").css("fill","rgba(0, 184, 255, 1)");
