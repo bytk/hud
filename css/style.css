@@ -55,6 +55,7 @@ html, body {
   position: absolute;
   z-index: 100000;
   width: 300px;
+  display: none;
 }
 
 #amount {
