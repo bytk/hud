@@ -36,9 +36,9 @@
             });
             var showResult = function() {
                     let amount = $("#amount").val();
-                    if (amount = 0) {
+                    if (amount <= 1) {
                             $(".speed").addClass("blink");
-                        }if (amount > 0) {
+                        }if (amount >= 2) {
                             $(".speed").removeClass("blink");
                         }
                         if (amount >= 10) {

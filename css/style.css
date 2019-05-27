@@ -78,30 +78,16 @@ html, body {
 }
 
 @keyframes fade {
-  from {
+  0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
+  100% {
+    opacity: 0;
   }
 }
 .blink {
-  animation: fade 1000ms infinite;
-  -webkit-animation: fade 1000ms infinite;
+  animation: fade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
+  -webkit-animation: fade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
 }
 
 /*
