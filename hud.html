@@ -37,10 +37,19 @@
             var showResult = function() {
                     let amount = $("#amount").val();
                         if (amount <= 10) {
-                            $("path.first").css("fill","rgba(0, 184, 255, 0.42)").css("opacity",".3").css("mix-blend-mode", "overlay");
+                            $("path.first").css("fill","rgba(0, 184, 255, 0.42)");
                         }
                         if (amount >= 20) {
-                            $("path.first").css("fill","rgba(0, 184, 255, 0.42)");
+                            $("path.first").css("fill","rgba(0, 184, 255, 0.52)");
+                        }
+                        if (amount >= 30) {
+                            $("path.first").css("fill","rgba(0, 184, 255, 0.62)");
+                        }
+                        if (amount >= 40) {
+                            $("path.first").css("fill","rgba(0, 184, 255, 0.72)");
+                        }
+                        if (amount >= 50) {
+                            $("path.first").css("fill","rgba(0, 184, 255, 0.82)");
                         }
                     }
         
