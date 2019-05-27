@@ -36,8 +36,8 @@
             });
             var showResult = function() {
                     let amount = $("#amount").val();
-                        if (amount <= 5) {
-                            $("path.first").css("fill","red");
+                        if (amount <= 10) {
+                            $("path.first").css("fill","rgba(0, 184, 255, 0.42)").css("opacity",".3").css("mix-blend-mode", "overlay");
                         }
                         if (amount >= 20) {
                             $("path.first").css("fill","rgba(0, 184, 255, 0.42)");
