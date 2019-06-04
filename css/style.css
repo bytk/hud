@@ -223,7 +223,7 @@ html, body {
 
 .progressbar .ui-progressbar-value {
   border: 0 !important;
-  overflow: auto !important;
+  overflow: visible !important;
 }
 
 .progressbar .ui-progressbar-value:after {
