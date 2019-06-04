@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<script src="js/script.js"></script>
+    <script>
+            $(document).ready(function() {
+            /* toggle fullscreen */
+            $('#hud').on('click',function(){
+                  if($(this).attr('display-state') == 0) {
+                      $(this).attr('display-state', 1);
+                      document.body.requestFullscreen();
+                  } else {
+                      $(this).attr('display-state', 0);
+                      document.exitFullscreen();
+                  }
+              });
+          
+          
+          
+              $( ".switch" ).click(function() {
+                  $( "#hud.gt-hud" ).toggleClass( "hudon" );
+                });
+            });
+            var showResult = function() {
+                    let amount = $("#amount").val();
+                    if (amount <= 1) {
+                            $("span.speed").addClass("blink");
+                        }if (amount >= 2) {
+                            $("span.speed").removeClass("blink");
+                        }
+                        if (amount >= 10) {
+                            $("path.first").css("fill","rgba(0, 184, 255, 1)");
+                        }
+                        if (amount >= 20) {
+                            $("path.second").css("fill","rgba(0, 184, 255, 1)");
+                        }
+                        if (amount >= 30) {
+                            $("path.third").css("fill","rgba(0, 184, 255, 1)");
+                        }
+                        if (amount >= 40) {
+                            $("path.fourth").css("fill","rgba(0, 184, 255, 1)");
+                        }
+                        if (amount >= 50) {
+                            $("path.fifth").css("fill","rgba(0, 184, 255, 1)");
+                        }
+                        if (amount <= 20) {
+                            $("path.second").css("fill","rgba(0, 184, 255, 0)");
+                        }
+                        if (amount <= 30) {
+                            $("path.third").css("fill","rgba(0, 184, 255, 0)");
+                        }
+                        if (amount <= 40) {
+                            $("path.fourth").css("fill","rgba(0, 184, 255, 0)");
+                        }
+                        if (amount <= 50) {
+                            $("path.fifth").css("fill","rgba(0, 184, 255, 0)");
+                        }
+                    }
+        
+              
+          </script>
+<button class="switch">hud</button>
+    <div id="hud" class="gt-hud" display-state="0">
+   <iframe width="932" height="524" src="https://www.youtube.com/embed/9qCmwCnNeMA/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+
+
+
+</body>
+</html>

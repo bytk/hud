@@ -101,19 +101,20 @@ html, body {
 }
 */
 .progressbar {
-  background: transparent;
-  border: 0 !important;
   position: absolute;
-  z-index: 100000;
-  right: 10px;
-  display: block;
-  width: 504px;
-  top: 50%;
-  border-radius: 3px;
-  height: 23px;
+  width: 60.55%;
+  float: right;
+  height: auto;
+  margin: 0;
+  bottom: 27%;
+  display: table;
+  top: auto;
+  right: 0;
   mix-blend-mode: hard-light;
-  bottom: 50%;
-  margin-top: 62px;
+  border-radius: 0;
+  border: 0 !important;
+  background: transparent;
+  z-index: 10000;
 }
 .progressbar .ui-progressbar-value {
   height: 23px;
