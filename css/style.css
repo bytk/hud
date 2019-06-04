@@ -208,4 +208,17 @@ html, body {
   mix-blend-mode: overlay;
 }
 
+#clock {
+  position: absolute;
+  right: 50%;
+  left: 46%;
+  margin: auto;
+  top: 30%;
+  bottom: 50%;
+  font-size: 120px;
+  font-family: "DigitalDismay";
+  opacity: 0.2;
+  color: #4daffc;
+}
+
 /*# sourceMappingURL=style.css.map */
