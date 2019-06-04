@@ -105,10 +105,10 @@ html, body {
   width: 60.55%;
   float: right;
   height: 23px;
-  margin: 0;
-  bottom: 31%;
+  margin: 62px 0 0 0;
+  bottom: 50%;
   display: table;
-  top: 69%;
+  top: 50%;
   right: 0;
   mix-blend-mode: hard-light;
   border-radius: 0;
