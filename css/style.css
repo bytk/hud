@@ -221,4 +221,22 @@ html, body {
   color: #4daffc;
 }
 
+.progressbar .ui-progressbar-value {
+  border: 0 !important;
+}
+
+.progressbar .ui-progressbar-value:after {
+  content: "";
+  display: table;
+  width: 30px;
+  height: 30px;
+  background: rgba(249, 252, 71, 0.5);
+  position: relative;
+  border-radius: 50%;
+  float: right;
+  top: -4px;
+  right: -15px;
+  mix-blend-mode: overlay;
+}
+
 /*# sourceMappingURL=style.css.map */
