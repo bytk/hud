@@ -16,6 +16,22 @@
 <body>
 	<script src="js/script.js"></script>
     <script>
+	  function updateClock ( )
+ 	{
+        var currentTime = new Date ( );
+        var currentHours = currentTime.getHours ( );
+        var currentMinutes = currentTime.getMinutes ( );
+        var currentSeconds = currentTime.getSeconds ( );
+        currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+        currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+        currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+      	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " ";
+   	    $("#clock").html(currentTimeString);	  	
+    }
+
+    $(document).ready(function()  {
+    setInterval('updateClock()', 1000);
+    });
             $(document).ready(function() {
             /* toggle fullscreen */
             $('#hud').on('click',function(){
@@ -77,6 +93,8 @@
 
 <input type="text" id="amount">
     <div id="hud" class="gt-hud" display-state="0">
+	    <div id="clock"></div>
+
         <div class="progressbar" style="position:absolute"></div>
         <span class="speed" style="margin-left:50px;display:block;width:200px;margin-top:-60px;text-align:center">66</span>
         <img src="img/gt-hud.svg" alt="" class="frame">
