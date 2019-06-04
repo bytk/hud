@@ -217,24 +217,24 @@ html, body {
   bottom: 50%;
   font-size: 120px;
   font-family: "DigitalDismay";
-  opacity: 0.2;
+  opacity: 0.4;
   color: #4daffc;
 }
 
 .progressbar .ui-progressbar-value {
   border: 0 !important;
-  overflow: visible !important;
+  overflow: auto !important;
 }
 
 .progressbar .ui-progressbar-value:after {
   border: 5px solid rgba(29, 161, 242, 0.2);
   border-left-color: #eff21d;
-  animation: rotate-s-loader 1s linear infinite;
+  animation: rotate-s-loader 1s ease-in-out infinite;
   content: "";
   display: table;
   width: 20px;
   height: 20px;
-  background: rgba(249, 252, 71, 0.5);
+  background: rgba(249, 252, 71, 0.25);
   position: relative;
   border-radius: 50%;
   float: right;
