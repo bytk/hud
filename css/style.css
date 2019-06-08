@@ -167,7 +167,7 @@ html, body {
 }
 #hud.gt-hud .speed {
   left: 0;
-  font-size: 140px;
+  font-size: 16vw;
   letter-spacing: -2px;
   margin: auto;
   top: 50%;
@@ -176,10 +176,10 @@ html, body {
   text-overflow: ellipsis;
   position: absolute;
   display: block;
-  width: 310px;
+  width: 38vw;
   text-align: center;
   height: 100%;
-  line-height: 330%;
+  line-height: 100vh;
 }
 #hud.gt-hud svg {
   width: 100%;
