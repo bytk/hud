@@ -176,8 +176,8 @@ html, body {
   text-overflow: ellipsis;
   position: absolute;
   display: table;
-  margin-left: 60px;
-  margin-top: -83px;
+  width: 310px;
+  text-align: center;
 }
 #hud.gt-hud svg {
   width: 100%;
