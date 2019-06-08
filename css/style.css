@@ -127,6 +127,7 @@ html, body {
   position: absolute;
   bottom: 100px;
   right: 100px;
+  display: none;
 }
 
 #hud {
@@ -179,7 +180,7 @@ html, body {
   width: 38vw;
   text-align: center;
   height: 100%;
-  line-height: 100vh;
+  line-height: 105vh;
 }
 #hud.gt-hud svg {
   width: 100%;
