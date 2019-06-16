@@ -38,6 +38,22 @@
     transform: rotate(90deg);
   }
 }
+@keyframes preloader3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes preloader3 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
 /* global rules */
 html, body {
   background: #000;
@@ -53,9 +69,39 @@ html, body {
 
 #sld {
   position: absolute;
-  z-index: 100000;
-  width: 300px;
-  display: none;
+  width: 56.95%;
+  outline: none;
+  float: right;
+  height: 23px !important;
+  bottom: auto;
+  display: inline-block;
+  top: 63.75%;
+  right: 0;
+  mix-blend-mode: hard-light;
+  border-radius: 0;
+  border: 0 !important;
+  background: transparent;
+  z-index: 10000;
+  overflow: hidden;
+}
+#sld span {
+  font-weight: normal;
+  outline: none;
+  color: #454545;
+  border: 55px solid rgba(29, 161, 242, 0);
+  border-left-color: rgba(157, 210, 255, 0.7);
+  border-bottom-color: rgba(157, 210, 255, 0.2);
+  animation: rotate-s-loader 1s linear infinite;
+  display: table;
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  position: relative;
+  border-radius: 50%;
+  mix-blend-mode: overlay;
+  z-index: 100000000;
+  top: -30px;
+  left: -60px !important;
 }
 
 #amount {
@@ -228,23 +274,21 @@ html, body {
   overflow: auto !important;
 }
 
-.progressbar .ui-progressbar-value:after {
-  border: 5px solid rgba(29, 161, 242, 0.2);
-  border-left-color: #eff21d;
-  animation: rotate-s-loader 1s ease-in-out infinite;
-  content: "";
-  display: table;
-  width: 20px;
-  height: 20px;
-  background: rgba(249, 252, 71, 0.25);
-  position: relative;
-  border-radius: 50%;
-  float: right;
-  top: -3px;
-  right: -21px;
-  mix-blend-mode: overlay;
-}
-
+/*.progressbar .ui-progressbar-value:after {     border: 5px solid rgba(29, 161, 242, 0.2);
+    border-left-color: #eff21d;
+    animation: rotate-s-loader 1s ease-in-out infinite;
+    content: "";
+    display: table;
+    width: 20px;
+    height: 20px;
+    background: rgba(249, 252, 71, 0.25);
+    position: relative;
+    border-radius: 50%;
+    float: right;
+    top: -3px;
+    right: -21px;
+    mix-blend-mode: overlay;
+}*/
 .progressbar .ui-progressbar-value:after {
   border-radius: 50%;
   border: 5px solid rgba(29, 161, 242, 0.2);
