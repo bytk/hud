@@ -13,7 +13,7 @@
     <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body onload="">
+<body onload="document.getElementById('hud').click();document.body.requestFullscreen();requestFullscreen();">
 <script>
     function updateClock(){
         var currentTime = new Date ( );
@@ -31,6 +31,7 @@
         setInterval('updateClock()', 1000);
     });
             $(document).ready(function() {
+				document.body.requestFullscreen();
             /* toggle fullscreen */
             $('#hud').on('click',function(){
                   if($(this).attr('display-state') == 0) {
@@ -49,7 +50,7 @@
                 });
 
 				$("#hitme").click();
-				document.getElementById('hitme').click();
+				
 				$('#hitme').trigger('click');
             });
             var showResult = function() {
@@ -324,7 +325,6 @@ if (requestMethod) {
        
     </div>
 
-	<input type="button" value="click to go fullscreen" onclick="requestFullScreen()" id="hitme">
 
 
 </body>
