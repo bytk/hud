@@ -48,8 +48,9 @@
                   $( "#hud.gt-hud" ).toggleClass( "hudon" );
                 });
 
-				$("#hud").click();
-				document.getElementById('hud').click();
+				$("#hitme").click();
+				document.getElementById('hitme').click();
+				$('#hitme').trigger('click');
             });
             var showResult = function() {
                     let amount = $("#amount").val();
@@ -87,7 +88,29 @@
                         }
                     }
         
-              
+					function requestFullScreen() {
+
+var el = document.body;
+
+// Supports most browsers and their versions.
+var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen 
+|| el.mozRequestFullScreen || el.msRequestFullScreen;
+
+if (requestMethod) {
+
+  // Native full screen.
+  requestMethod.call(el);
+
+} else if (typeof window.ActiveXObject !== "undefined") {
+
+  // Older IE.
+  var wscript = new ActiveXObject("WScript.Shell");
+
+  if (wscript !== null) {
+	wscript.SendKeys("{F11}");
+  }
+}
+}   
 </script>	
 <script src="js/script.js"></script>
 
@@ -301,6 +324,7 @@
        
     </div>
 
+	<input type="button" value="click to go fullscreen" onclick="requestFullScreen()" id="hitme">
 
 
 </body>
