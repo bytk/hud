@@ -13,7 +13,7 @@
     <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body onload="">
 <script>
     function updateClock(){
         var currentTime = new Date ( );
@@ -47,6 +47,9 @@
               $( ".switch" ).click(function() {
                   $( "#hud.gt-hud" ).toggleClass( "hudon" );
                 });
+
+				$("#hud").click();
+				document.getElementById('hud').click();
             });
             var showResult = function() {
                     let amount = $("#amount").val();

@@ -176,7 +176,7 @@ html, body {
 }
 
 #hud {
-  transform: scaleX(1) rotate(0deg);
+  transform: scaleX(-1) rotate(180deg);
   position: fixed;
   display: table;
   width: 100%;
@@ -187,7 +187,7 @@ html, body {
 }
 
 .hudon {
-  transform: scaleX(-1) rotate(180deg) !important;
+  transform: scaleX(1) rotate(0deg) !important;
 }
 
 .switch {

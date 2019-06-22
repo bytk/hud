@@ -86,11 +86,11 @@ animation:fade 3000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 
 
 
-#hud {  transform: scaleX(1) rotate(0deg); position: fixed; display: table; width: 100%; height: 100%; margin: 0; padding: 0; z-index: 1000;
+#hud {  transform: scaleX(-1) rotate(180deg); position: fixed; display: table; width: 100%; height: 100%; margin: 0; padding: 0; z-index: 1000;
    // .speed { position: fixed; font-size: 280px; letter-spacing: -6px; z-index: 50; display: table; text-align: center; width: 100%; height: 100%; margin: auto; box-sizing: border-box; padding: 50px 0 0 0;}
 }
 
-.hudon { transform: scaleX(-1) rotate(180deg)!important; }
+.hudon { transform: scaleX(1) rotate(0deg)!important; }
 .switch {position: fixed; z-index: 1000000; border-radius: 7px; border: 1px rgba(255,255,255,.5) solid; background: transparent; color: white; width: 100px; height: 50px; right: 30px; top: 30px;}
 #amount {display:none; position: fixed; }
 
